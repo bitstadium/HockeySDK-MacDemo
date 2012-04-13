@@ -1,0 +1,3 @@
+[submodule "Vendor/HockeySDK"]
+	path = Vendor/HockeySDK
+	url = git@github.com:codenauts/HockeySDK-Mac.git
