@@ -46,7 +46,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)note {
   // Launch the crash reporter task
   
-  [[CNSHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>" companyName:@"My company" delegate:self];
+  [[CNSHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>" companyName:@"My company" exceptionInterceptionEnabled:YES delegate:self];
 }
 
 
