@@ -35,5 +35,6 @@
 }
 
 - (IBAction)doCrash:(id)sender;
+- (IBAction)doExceptionCrash:(id)sender;
 
 @end

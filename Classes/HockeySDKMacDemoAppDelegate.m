@@ -53,14 +53,26 @@
 #pragma mark - Crash
 
 - (void)bam {
+	/* Trigger a crash */
   signal(SIGBUS, SIG_DFL);
   
   *(long*)0 = 0xDEADBEEF;
 }
 
+- (void)exceptionBam {
+	/* Trigger a crash */
+  NSArray *array = [NSArray array];
+  [array objectAtIndex:23];
+//  [NSException raise:NSInvalidArgumentException format:@"Foo must not be nil"];  
+}
+
 
 - (IBAction)doCrash:(id)sender {
   [self bam];
+}
+
+- (IBAction)doExceptionCrash:(id)sender {
+  [self exceptionBam];
 }
 
 @end
