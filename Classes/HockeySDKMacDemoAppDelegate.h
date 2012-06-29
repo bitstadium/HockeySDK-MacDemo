@@ -28,9 +28,9 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <HockeySDK/CNSHockeyManagerDelegate.h>
+#import <HockeySDK/CNSCrashReportManagerDelegate.h>
 
-@interface HockeySDKMacDemoAppDelegate : NSObject <CNSHockeyManagerDelegate> {
+@interface HockeySDKMacDemoAppDelegate : NSObject <CNSCrashReportManagerDelegate> {
   IBOutlet NSWindow *window;
 }
 
