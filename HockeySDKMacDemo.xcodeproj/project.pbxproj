@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E935907152388B800F51DBD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E935905152388B800F51DBD /* MainMenu.xib */; };
+		1E413D9715A0FA9600620BFE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E413D9915A0FA9600620BFE /* MainMenu.xib */; };
 		1E93590D152388E100F51DBD /* HockeySDKMacDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E93590C152388E100F51DBD /* HockeySDKMacDemoAppDelegate.m */; };
 		1EB6127D102B787100B206A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6127C102B787100B206A7 /* main.m */; };
 		1EB61442102B8BEE00B206A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
@@ -43,9 +43,9 @@
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1E413D9815A0FA9600620BFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1E935903152388B800F51DBD /* HockeySDKMacDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HockeySDKMacDemo_Prefix.pch; path = Resources/HockeySDKMacDemo_Prefix.pch; sourceTree = "<group>"; };
 		1E935904152388B800F51DBD /* HockeySDKMacDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HockeySDKMacDemo-Info.plist"; path = "Resources/HockeySDKMacDemo-Info.plist"; sourceTree = "<group>"; };
-		1E935905152388B800F51DBD /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
 		1E93590B152388E100F51DBD /* HockeySDKMacDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HockeySDKMacDemoAppDelegate.h; path = Classes/HockeySDKMacDemoAppDelegate.h; sourceTree = "<group>"; };
 		1E93590C152388E100F51DBD /* HockeySDKMacDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HockeySDKMacDemoAppDelegate.m; path = Classes/HockeySDKMacDemoAppDelegate.m; sourceTree = "<group>"; };
 		1EB61267102B779200B206A7 /* HockeySDKMacDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HockeySDKMacDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +103,7 @@
 			children = (
 				1E935903152388B800F51DBD /* HockeySDKMacDemo_Prefix.pch */,
 				1E935904152388B800F51DBD /* HockeySDKMacDemo-Info.plist */,
-				1E935905152388B800F51DBD /* MainMenu.xib */,
+				1E413D9915A0FA9600620BFE /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -196,6 +196,7 @@
 				French,
 				German,
 				Italian,
+				de,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* crashReporter */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -228,7 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E935907152388B800F51DBD /* MainMenu.xib in Resources */,
+				1E413D9715A0FA9600620BFE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +246,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E413D9915A0FA9600620BFE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E413D9815A0FA9600620BFE /* en */,
+			);
+			name = MainMenu.xib;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB91B208733DA50010E9CD /* Debug */ = {
