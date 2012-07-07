@@ -28,11 +28,11 @@
  */
 
 #import "HockeySDKMacDemoAppDelegate.h"
-#import <HockeySDK/CNSHockeyManager.h>
+#import <HockeySDK/HockeySDK.h>
 
 @implementation HockeySDKMacDemoAppDelegate
 
-#pragma mark - CNSCrashReportManagerDelegate
+#pragma mark - BITCrashReportManagerDelegate
 
 // set the main nibs window to hidden on startup
 // this delegate method is required to be implemented!
@@ -46,7 +46,11 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)note {
   // Launch the crash reporter task
   
-  [[CNSHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>" companyName:@"My company" exceptionInterceptionEnabled:YES crashReportManagerDelegate:self];
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>" companyName:@"My company" crashReportManagerDelegate:self];
+  [[BITHockeyManager sharedHockeyManager] setLoggingEnabled:YES];
+  [[BITHockeyManager sharedHockeyManager] setExceptionInterceptionEnabled:YES];
+  [[BITHockeyManager sharedHockeyManager] setAskUserDetails:YES];
+  [[BITHockeyManager sharedHockeyManager] startManager];
 }
 
 
