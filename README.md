@@ -4,6 +4,10 @@ The SDK is integrated as a git submodule adding the HockeySDK-Mac Xcode project 
 
 ## Release Notes
 
+Version 1.0.1:
+ 
+- Update to HockeySDK-Mac 1.0.1
+
 Version 1.0:
 
 - First public release
