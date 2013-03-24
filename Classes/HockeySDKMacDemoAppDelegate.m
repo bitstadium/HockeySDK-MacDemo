@@ -55,6 +55,11 @@
   [[BITHockeyManager sharedHockeyManager] setExceptionInterceptionEnabled:YES];
   [[BITHockeyManager sharedHockeyManager] setAskUserDetails:YES];
   [[BITHockeyManager sharedHockeyManager] startManager];
+
+  NSNotificationCenter *dnc = [NSNotificationCenter defaultCenter];
+  [dnc addObserver:self selector:@selector(startUsage) name:NSApplicationDidBecomeActiveNotification object:nil];
+  [dnc addObserver:self selector:@selector(stopUsage) name:NSApplicationWillTerminateNotification object:nil];
+  [dnc addObserver:self selector:@selector(stopUsage) name:NSApplicationWillResignActiveNotification object:nil];
 }
 
 
@@ -81,6 +86,17 @@
 
 - (IBAction)doExceptionCrash:(id)sender {
   [self exceptionBam];
+}
+
+#pragma mark - Usage Time Tracking
+- (void)startUsage {
+  NSLog(@"start");
+  return [[BITSystemProfile sharedSystemProfile] startUsage];
+}
+
+- (void)stopUsage {
+  NSLog(@"stop");
+  return [[BITSystemProfile sharedSystemProfile] stopUsage];
 }
 
 @end
