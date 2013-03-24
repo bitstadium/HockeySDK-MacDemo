@@ -34,6 +34,10 @@
 
 #pragma mark - BITCrashReportManagerDelegate
 
+-(NSString *)crashReportApplicationLog {
+  return @"test";
+}
+
 // set the main nibs window to hidden on startup
 // this delegate method is required to be implemented!
 - (void) showMainApplicationWindow {
