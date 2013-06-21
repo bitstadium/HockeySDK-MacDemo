@@ -29,9 +29,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import <HockeySDK/BITCrashReportManagerDelegate.h>
+#import <Sparkle/Sparkle.h>
 
 @interface HockeySDKMacDemoAppDelegate : NSObject <BITCrashReportManagerDelegate> {
   IBOutlet NSWindow *window;
+  IBOutlet SUUpdater *sparkle;
 }
 
 - (IBAction)doCrash:(id)sender;

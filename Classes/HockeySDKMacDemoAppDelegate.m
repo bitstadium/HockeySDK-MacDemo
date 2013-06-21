@@ -50,11 +50,16 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)note {
   // Launch the crash reporter task
   
-  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>" companyName:@"My company" crashReportManagerDelegate:self];
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"d4eb6d9bbe85ba3a4a22f90f38562881" companyName:@"My company" crashReportManagerDelegate:self];
   [[BITHockeyManager sharedHockeyManager] setLoggingEnabled:YES];
   [[BITHockeyManager sharedHockeyManager] setExceptionInterceptionEnabled:YES];
   [[BITHockeyManager sharedHockeyManager] setAskUserDetails:YES];
   [[BITHockeyManager sharedHockeyManager] startManager];
+  
+  sparkle.delegate = self;
+  sparkle.feedURL = [NSURL URLWithString:@"https://rink.hockeyapp.net/api/2/apps/d4eb6d9bbe85ba3a4a22f90f38562881"];
+  sparkle.sendsSystemProfile = YES;
+  [sparkle checkForUpdatesInBackground];
 
   NSNotificationCenter *dnc = [NSNotificationCenter defaultCenter];
   [dnc addObserver:self selector:@selector(startUsage) name:NSApplicationDidBecomeActiveNotification object:nil];
@@ -62,6 +67,12 @@
   [dnc addObserver:self selector:@selector(stopUsage) name:NSApplicationWillResignActiveNotification object:nil];
 }
 
+#pragma mark - Sparkle
+
+- (NSArray *)feedParametersForUpdater:(SUUpdater *)updater
+                 sendingSystemProfile:(BOOL)sendingProfile {
+  return [[BITSystemProfile sharedSystemProfile] systemUsageData];
+}
 
 #pragma mark - Crash
 
@@ -89,6 +100,7 @@
 }
 
 #pragma mark - Usage Time Tracking
+
 - (void)startUsage {
   NSLog(@"start");
   return [[BITSystemProfile sharedSystemProfile] startUsage];
