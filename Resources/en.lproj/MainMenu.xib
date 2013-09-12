@@ -2,10 +2,17 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
+<<<<<<< Updated upstream
 		<string key="IBDocument.SystemVersion">12E55</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.39</string>
 		<string key="IBDocument.HIToolboxVersion">626.00</string>
+=======
+		<string key="IBDocument.SystemVersion">13A524d</string>
+		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
+		<string key="IBDocument.AppKitVersion">1244.12</string>
+		<string key="IBDocument.HIToolboxVersion">686.00</string>
+>>>>>>> Stashed changes
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">3084</string>
@@ -125,7 +132,11 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="NSMenuItem" id="222393205">
 						<reference key="NSMenu" ref="488615198"/>
+<<<<<<< Updated upstream
 						<string key="NSTitle">HockeySDK-MacDemo</string>
+=======
+						<string key="NSTitle">HockeySDKMacDemo</string>
+>>>>>>> Stashed changes
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<object class="NSCustomResource" key="NSOnImage" id="445831091">
@@ -137,13 +148,22 @@
 							<string key="NSResourceName">NSMenuMixedState</string>
 						</object>
 						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="685589876"/>
 						<object class="NSMenu" key="NSSubmenu" id="685589876">
+<<<<<<< Updated upstream
 							<string key="NSTitle">HockeySDK-MacDemo</string>
+=======
+							<string key="NSTitle">HockeySDKMacDemo</string>
+>>>>>>> Stashed changes
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSMenuItem" id="269621852">
 									<reference key="NSMenu" ref="685589876"/>
+<<<<<<< Updated upstream
 									<string key="NSTitle">About HockeySDK-MacDemo</string>
+=======
+									<string key="NSTitle">About HockeySDKMacDemo</string>
+>>>>>>> Stashed changes
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="445831091"/>
@@ -195,6 +215,7 @@
 									<reference key="NSOnImage" ref="445831091"/>
 									<reference key="NSMixedImage" ref="709976631"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="455257368"/>
 									<object class="NSMenu" key="NSSubmenu" id="455257368">
 										<string key="NSTitle">Services</string>
 										<object class="NSMutableArray" key="NSMenuItems">
@@ -251,7 +272,7 @@
 								</object>
 								<object class="NSMenuItem" id="359146966">
 									<reference key="NSMenu" ref="685589876"/>
-									<string key="NSTitle">Quit QuincyDemo</string>
+									<string key="NSTitle">Quit HockeySDKMacDemo</string>
 									<string key="NSKeyEquiv">q</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -260,6 +281,38 @@
 								</object>
 							</object>
 							<string key="NSName">_NSAppleMenu</string>
+						</object>
+					</object>
+					<object class="NSMenuItem" id="542955011">
+						<reference key="NSMenu" ref="488615198"/>
+						<string key="NSTitle">Crash</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="445831091"/>
+						<reference key="NSMixedImage" ref="709976631"/>
+						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="272726551"/>
+						<object class="NSMenu" key="NSSubmenu" id="272726551">
+							<string key="NSTitle">Crash</string>
+							<object class="NSMutableArray" key="NSMenuItems">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="NSMenuItem" id="128275205">
+									<reference key="NSMenu" ref="272726551"/>
+									<string key="NSTitle">Crash me!</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="445831091"/>
+									<reference key="NSMixedImage" ref="709976631"/>
+								</object>
+								<object class="NSMenuItem" id="392865338">
+									<reference key="NSMenu" ref="272726551"/>
+									<string key="NSTitle">Exception crasher!</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="445831091"/>
+									<reference key="NSMixedImage" ref="709976631"/>
+								</object>
+							</object>
 						</object>
 					</object>
 				</object>
@@ -310,6 +363,14 @@
 					<int key="connectionID">592</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">menu</string>
+						<reference key="source" ref="972006081"/>
+						<reference key="destination" ref="488615198"/>
+					</object>
+					<int key="connectionID">605</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">doCrash:</string>
 						<reference key="source" ref="161217218"/>
@@ -334,6 +395,7 @@
 					<int key="connectionID">597</int>
 				</object>
 				<object class="IBConnectionRecord">
+<<<<<<< Updated upstream
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">sparkle</string>
 						<reference key="source" ref="161217218"/>
@@ -348,6 +410,22 @@
 						<reference key="destination" ref="781460897"/>
 					</object>
 					<int key="connectionID">601</int>
+=======
+					<object class="IBActionConnection" key="connection">
+						<string key="label">doCrash:</string>
+						<reference key="source" ref="161217218"/>
+						<reference key="destination" ref="128275205"/>
+					</object>
+					<int key="connectionID">603</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">doExceptionCrash:</string>
+						<reference key="source" ref="161217218"/>
+						<reference key="destination" ref="392865338"/>
+					</object>
+					<int key="connectionID">604</int>
+>>>>>>> Stashed changes
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -424,6 +502,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="222393205"/>
+							<reference ref="542955011"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Main Menu</string>
@@ -537,6 +616,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">598</int>
+<<<<<<< Updated upstream
 						<reference key="object" ref="948225500"/>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -544,6 +624,34 @@
 						<int key="objectID">600</int>
 						<reference key="object" ref="781460897"/>
 						<reference key="parent" ref="685589876"/>
+=======
+						<reference key="object" ref="542955011"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="272726551"/>
+						</object>
+						<reference key="parent" ref="488615198"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">599</int>
+						<reference key="object" ref="272726551"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="128275205"/>
+							<reference ref="392865338"/>
+						</object>
+						<reference key="parent" ref="542955011"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">600</int>
+						<reference key="object" ref="128275205"/>
+						<reference key="parent" ref="272726551"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">601</int>
+						<reference key="object" ref="392865338"/>
+						<reference key="parent" ref="272726551"/>
+>>>>>>> Stashed changes
 					</object>
 				</object>
 			</object>
@@ -579,7 +687,13 @@
 					<string>594.IBPluginDependency</string>
 					<string>595.IBPluginDependency</string>
 					<string>598.IBPluginDependency</string>
+<<<<<<< Updated upstream
 					<string>600.IBPluginDependency</string>
+=======
+					<string>599.IBPluginDependency</string>
+					<string>600.IBPluginDependency</string>
+					<string>601.IBPluginDependency</string>
+>>>>>>> Stashed changes
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -612,6 +726,11 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+<<<<<<< Updated upstream
+=======
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+>>>>>>> Stashed changes
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -626,7 +745,11 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
+<<<<<<< Updated upstream
 			<int key="maxID">601</int>
+=======
+			<int key="maxID">605</int>
+>>>>>>> Stashed changes
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

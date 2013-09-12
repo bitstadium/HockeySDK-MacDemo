@@ -2,6 +2,7 @@
  * Author: Andreas Linde <mail@andreaslinde.de>
  *         Kent Sutherland
  *
+ * Copyright (c) 2012-2013 HockeyApp, Bit Stadium GmbH. All rights reserved.
  * Copyright (c) 2011 Andreas Linde & Kent Sutherland. All rights reserved.
  * All rights reserved.
  *
@@ -30,30 +31,34 @@
 #import "HockeySDKMacDemoAppDelegate.h"
 #import <HockeySDK/HockeySDK.h>
 
+@interface HockeySDKMacDemoAppDelegate() <BITHockeyManagerDelegate>
+
+@end
+
 @implementation HockeySDKMacDemoAppDelegate
 
-#pragma mark - BITCrashReportManagerDelegate
+#pragma mark - BITCrashManagerDelegate
 
--(NSString *)crashReportApplicationLog {
+-(NSString *)applicationLogForCrashManager:(id)crashManager {
   return @"test";
 }
 
 // set the main nibs window to hidden on startup
 // this delegate method is required to be implemented!
-- (void) showMainApplicationWindow {
+- (void) showMainApplicationWindowForCrashManager:(id)crashManager {
   [window makeFirstResponder: nil];
   [window makeKeyAndOrderFront:nil];
 }
+
 
 #pragma mark - Application
 
 - (void)applicationDidFinishLaunching:(NSNotification *)note {
   // Launch the crash reporter task
   
-  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"d4eb6d9bbe85ba3a4a22f90f38562881" companyName:@"My company" crashReportManagerDelegate:self];
-  [[BITHockeyManager sharedHockeyManager] setLoggingEnabled:YES];
-  [[BITHockeyManager sharedHockeyManager] setExceptionInterceptionEnabled:YES];
-  [[BITHockeyManager sharedHockeyManager] setAskUserDetails:YES];
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>" companyName:@"My company" delegate:self];
+  [[BITHockeyManager sharedHockeyManager] setDebugLogEnabled:YES];
+  [[BITHockeyManager sharedHockeyManager].crashManager setAskUserDetails:NO];
   [[BITHockeyManager sharedHockeyManager] startManager];
   
   sparkle.delegate = self;
