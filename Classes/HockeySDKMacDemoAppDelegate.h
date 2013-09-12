@@ -29,7 +29,6 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <HockeySDK/BITCrashReportManagerDelegate.h>
 #import <Sparkle/Sparkle.h>
 
 @interface HockeySDKMacDemoAppDelegate : NSObject {
