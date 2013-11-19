@@ -2,6 +2,7 @@
  * Author: Andreas Linde <mail@andreaslinde.de>
  *         Kent Sutherland
  *
+ * Copyright (c) 2012-2013 HockeyApp, Bit Stadium GmbH. All rights reserved.
  * Copyright (c) 2011 Andreas Linde & Kent Sutherland. All rights reserved.
  * All rights reserved.
  *
@@ -28,10 +29,11 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <HockeySDK/BITCrashReportManagerDelegate.h>
+#import <Sparkle/Sparkle.h>
 
-@interface HockeySDKMacDemoAppDelegate : NSObject <BITCrashReportManagerDelegate> {
+@interface HockeySDKMacDemoAppDelegate : NSObject {
   IBOutlet NSWindow *window;
+  IBOutlet SUUpdater *sparkle;
 }
 
 - (IBAction)doCrash:(id)sender;
