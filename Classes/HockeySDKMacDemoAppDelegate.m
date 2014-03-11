@@ -43,26 +43,21 @@
   return @"test";
 }
 
-// set the main nibs window to hidden on startup
-// this delegate method is required to be implemented!
-- (void) showMainApplicationWindowForCrashManager:(id)crashManager {
-  [window makeFirstResponder: nil];
-  [window makeKeyAndOrderFront:nil];
-}
-
 
 #pragma mark - Application
 
 - (void)applicationDidFinishLaunching:(NSNotification *)note {
   // Launch the crash reporter task
   
-  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>" companyName:@"My company" delegate:self];
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>"];
   [[BITHockeyManager sharedHockeyManager] setDebugLogEnabled:YES];
   [[BITHockeyManager sharedHockeyManager].crashManager setAskUserDetails:NO];
+  [[BITHockeyManager sharedHockeyManager].feedbackManager setRequireUserName:BITFeedbackUserDataElementRequired];
+  [[BITHockeyManager sharedHockeyManager].feedbackManager setRequireUserEmail:BITFeedbackUserDataElementOptional];
   [[BITHockeyManager sharedHockeyManager] startManager];
   
   sparkle.delegate = self;
-  sparkle.feedURL = [NSURL URLWithString:@"https://rink.hockeyapp.net/api/2/apps/d4eb6d9bbe85ba3a4a22f90f38562881"];
+  sparkle.feedURL = [NSURL URLWithString:@"https://rink.hockeyapp.net/api/2/apps/<enter your app identifier in here>"];
   sparkle.sendsSystemProfile = YES;
   [sparkle checkForUpdatesInBackground];
 
@@ -70,6 +65,15 @@
   [dnc addObserver:self selector:@selector(startUsage) name:NSApplicationDidBecomeActiveNotification object:nil];
   [dnc addObserver:self selector:@selector(stopUsage) name:NSApplicationWillTerminateNotification object:nil];
   [dnc addObserver:self selector:@selector(stopUsage) name:NSApplicationWillResignActiveNotification object:nil];
+
+  [window makeFirstResponder: nil];
+  [window makeKeyAndOrderFront:nil];
+}
+
+#pragma mark - Feedback Hockey Window
+
+- (IBAction)showFeedbackView:(id)sender {
+  [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackWindow];
 }
 
 #pragma mark - Sparkle
@@ -78,6 +82,7 @@
                  sendingSystemProfile:(BOOL)sendingProfile {
   return [[BITSystemProfile sharedSystemProfile] systemUsageData];
 }
+
 
 #pragma mark - Crash
 

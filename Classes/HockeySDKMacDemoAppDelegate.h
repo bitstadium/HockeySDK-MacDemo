@@ -36,6 +36,7 @@
   IBOutlet SUUpdater *sparkle;
 }
 
+- (IBAction)showFeedbackView:(id)sender;
 - (IBAction)doCrash:(id)sender;
 - (IBAction)doExceptionCrash:(id)sender;
 
