@@ -13,18 +13,31 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.1.0</string>
+	<string>3.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>net.hockeyappp.sdk.mac.demo</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>had4eb6d9bbe85ba3a4a22f90f38562881</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>5</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2012-2013 HockeyApp, Bit Stadium GmbH. All rights reserved.</string>
+	<string>Copyright © 2012-2014 HockeyApp, Bit Stadium GmbH. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
-	<string>BITCrashExceptionApplication</string>
+	<string>NSApplication</string>
 </dict>
 </plist>
