@@ -37,12 +37,6 @@
 
 @implementation HockeySDKMacDemoAppDelegate
 
-#pragma mark - BITCrashManagerDelegate
-
--(NSString *)applicationLogForCrashManager:(id)crashManager {
-  return @"test";
-}
-
 
 #pragma mark - Application
 
@@ -56,10 +50,10 @@
   [[BITHockeyManager sharedHockeyManager].feedbackManager setRequireUserEmail:BITFeedbackUserDataElementOptional];
   [[BITHockeyManager sharedHockeyManager] startManager];
   
-  sparkle.delegate = self;
-  sparkle.feedURL = [NSURL URLWithString:@"https://rink.hockeyapp.net/api/2/apps/<enter your app identifier in here>"];
-  sparkle.sendsSystemProfile = YES;
-  [sparkle checkForUpdatesInBackground];
+  self.sparkle.delegate = self;
+  self.sparkle.feedURL = [NSURL URLWithString:@"https://rink.hockeyapp.net/api/2/apps/<enter your app identifier in here>"];
+  self.sparkle.sendsSystemProfile = YES;
+  [self.sparkle checkForUpdatesInBackground];
 
   NSNotificationCenter *dnc = [NSNotificationCenter defaultCenter];
   [dnc addObserver:self selector:@selector(startUsage) name:NSApplicationDidBecomeActiveNotification object:nil];
@@ -70,9 +64,6 @@
   // Otherwise it would should up alongside the auth window and the user can
   // use the app without authenticating
   [self setupApplication];
-}
-
-
 }
 
 
