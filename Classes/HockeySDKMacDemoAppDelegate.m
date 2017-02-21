@@ -44,7 +44,7 @@
   // Launch the crash reporter task
   
   [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<enter your app identifier in here>"];
-  [[BITHockeyManager sharedHockeyManager] setDebugLogEnabled:YES];
+  [[BITHockeyManager sharedHockeyManager] setLogLevel:BITLogLevelVerbose];
   [[BITHockeyManager sharedHockeyManager].crashManager setAskUserDetails:NO];
   [[BITHockeyManager sharedHockeyManager].feedbackManager setRequireUserName:BITFeedbackUserDataElementRequired];
   [[BITHockeyManager sharedHockeyManager].feedbackManager setRequireUserEmail:BITFeedbackUserDataElementOptional];
